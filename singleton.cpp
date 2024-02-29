@@ -1,8 +1,11 @@
 #include <iostream>
-#define EHAN   0
+#define EHAN   1
 
 #if EHAN
-//饿汉式：线程安全，注意一定要在合适的地方去delete它
+/*饿汉式：线程安全，注意一定要在合适的地方去delete它
+饿汉模式是线程安全的。 这是因为饿汉模式在类加载时就将实例初始化，]
+并且永远只有一个实例。 由于实例在类加载时就创建，所以不存在多线程竞争的情况，因此饿汉模式是线程安全的。
+*/
 class Singleton
 {
 public:
